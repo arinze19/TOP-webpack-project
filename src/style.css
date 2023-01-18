@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+html,
+body {
+  font-family: 'DM Sans', Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.cover-background {
+  width: 100%;
+  height: 100vh;
+  background-image: url('https://i.pinimg.com/564x/58/47/ab/5847ab13094549d2eb984a7157ed5708.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: contrast(95%);
+}
+
+.header {
+  font-size: 28px;
+  font-weight: 500;
+  padding: 1rem;
+  text-align: center;
+  background-color: #ff8906;
+  color: #fffffe;
+}
+
+.tab-list {
+  display: flex;
+  border-radius: 10px;
+  background-color: #fffffe;
+  border: 1px solid #0f0e17;
+  width: clamp(250px, 400px, 90%);
+  margin: 4rem auto;
+  overflow: hidden;
+}
+
+.tab-item {
+  padding: 1rem;
+  color: #0f0e17;
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  border: none;
+  font-weight: 500;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.tab-item:not(:last-child) {
+  border-right: 1px solid #0f0e17;
+}
+
+.tab-item.active {
+  background: #0f0e17;
+  color: #fffffe;
+}
