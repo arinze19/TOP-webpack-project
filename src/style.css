@@ -1,10 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=DM+Sans:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 html,
 body {
   font-family: 'DM Sans', Arial, Helvetica, sans-serif;
   padding: 0;
   margin: 0;
+  line-height: 25px;
+  color: #0f0e17;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Abril Fatface', 'Courier New', Courier, monospace;
+  margin: 15px 0;
 }
 
 .cover-background {
@@ -17,12 +34,13 @@ body {
 }
 
 .header {
-  font-size: 28px;
+  font-size: 32px;
   font-weight: 500;
   padding: 1rem;
   text-align: center;
   background-color: #ff8906;
   color: #fffffe;
+  font-family: 'Abril Fatface', 'Courier New', Courier, monospace;
 }
 
 .tab-list {
@@ -30,13 +48,14 @@ body {
   border-radius: 10px;
   background-color: #fffffe;
   border: 1px solid #0f0e17;
-  width: clamp(250px, 400px, 90%);
-  margin: 4rem auto;
+  max-width: 80%;
+  width: 400px;
+  margin: 2rem auto;
   overflow: hidden;
 }
 
 .tab-item {
-  padding: 1rem;
+  padding: 0.5rem;
   color: #0f0e17;
   width: 100%;
   height: 100%;
@@ -54,4 +73,69 @@ body {
 .tab-item.active {
   background: #0f0e17;
   color: #fffffe;
+}
+
+.component {
+  max-width: 450px;
+  width: 90%;
+  height: fit-content;
+  padding: 1rem;
+  background: #fffffe;
+  border-radius: 20px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  box-shadow: 0px 5px 10px #b2b2b284;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+table {
+  width: 95%;
+  max-width: 350px;
+}
+
+th {
+  background-color: #0f0e17;
+  color: #fffffe;
+}
+
+th:first-child {
+  border-top-left-radius: 5px;
+}
+
+th:last-child {
+  border-top-right-radius: 5px;
+}
+
+tr > td {
+  text-align: center;
+}
+
+.profile-image {
+  width: 100px;
+  height: 100px;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  border-radius: 5px;
+  box-shadow: 0px 3px 10px #b2b2b244;
+  overflow: hidden;
+  width: 90%;
+  margin: 1rem auto;
+  font-size: 14px;
+}
+
+.card div {
+  margin: auto;
+  padding: 0 2rem;
+  overflow: scroll;
+  white-space: nowrap;
+  width: 100%;
 }
