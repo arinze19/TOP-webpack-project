@@ -46,7 +46,6 @@ h5 {
 .tab-list {
   display: flex;
   border-radius: 10px;
-  background-color: #fffffe;
   border: 1px solid #0f0e17;
   max-width: 80%;
   width: 400px;
@@ -57,6 +56,7 @@ h5 {
 .tab-item {
   padding: 0.5rem;
   color: #0f0e17;
+  background-color: white;
   width: 100%;
   height: 100%;
   border-radius: 0;
@@ -85,7 +85,7 @@ h5 {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
   box-shadow: 0px 5px 10px #b2b2b284;
 }
 
@@ -97,11 +97,14 @@ h5 {
 table {
   width: 95%;
   max-width: 350px;
+  border-collapse: collapse;
+  box-shadow: 0px 1px 3px #b2b2b284;
 }
 
 th {
   background-color: #0f0e17;
   color: #fffffe;
+  padding: 10px;
 }
 
 th:first-child {
@@ -116,26 +119,49 @@ tr > td {
   text-align: center;
 }
 
+td {
+  border-bottom: 1px solid #0f0e1725;
+  padding: 10px;
+}
+
 .profile-image {
-  width: 100px;
+  width: 30%;
+  max-width: 300px;
   height: 100px;
 }
 
 .card {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
+  display: flex;
   border-radius: 5px;
   box-shadow: 0px 3px 10px #b2b2b244;
   overflow: hidden;
-  width: 90%;
-  margin: 1rem auto;
-  font-size: 14px;
+  width: 100%;
+  font-size: 12px;
 }
 
-.card div {
-  margin: auto;
-  padding: 0 2rem;
-  overflow: scroll;
-  white-space: nowrap;
-  width: 100%;
+.details {
+  padding: 5px 1rem 0;
+}
+
+.badge {
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.out-of-stock {
+  color: white;
+  background-color: #ccc;
+  border: 1px solid white;
+}
+
+.hot {
+  color: #ff6347;
+  background-color: #dc143c38;
+  border: 1px solid #ff6347;
+}
+
+.available {
+  color: green;
+  background-color: #03d1034a;
+  border: 1px solid green;
 }

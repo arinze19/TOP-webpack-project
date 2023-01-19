@@ -1,12 +1,11 @@
 const contactWrapper = document.createElement('div');
 const intro = document.createElement('div');
-const contactsList = document.createElement('div');
-// contactWrapper.textContent = 'Contact Page';
 contactWrapper.classList.add('component');
 
 // ================ intro section
 intro.textContent =
   'Need to contact us to lay a complaint? feel free to reach any of our lines below: 📧';
+contactWrapper.appendChild(intro);
 
 const contacts = [
   {
@@ -25,7 +24,7 @@ const contacts = [
   },
   {
     name: 'Skilly Willy',
-    role: 'waiter',
+    role: 'Waiter',
     email: 'willynocap@jerrys.com',
     image_url:
       'https://i.pinimg.com/564x/14/78/1d/14781d2e55699eca1cb417c6be6bc72a.jpg',
@@ -37,6 +36,8 @@ for (let i = 0; i < contacts.length; i++) {
   container.classList.add('card');
 
   const details = document.createElement('div');
+  details.classList.add('details');
+
   const name = document.createElement('p');
   name.textContent = `Name: ${contacts[i].name}`;
 
@@ -53,10 +54,7 @@ for (let i = 0; i < contacts.length; i++) {
   image.src = contacts[i].image_url;
 
   container.append(image, details);
-  contactsList.appendChild(container);
+  contactWrapper.appendChild(container);
 }
-
-// ================== Append all
-contactWrapper.append(intro, contactsList);
 
 export default contactWrapper;
